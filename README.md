@@ -293,6 +293,8 @@ Below are the import commands for all csv files to import into the mongodb - **y
 
 Run the Colab connection script [test-colab-mongodb.ipynb](test-colab-mongodb.ipynb) and ensure that you get the connection and the number of tables correctly. Make sure that you update the database name, the username and the password. 
 
+**Note** that The port should be 27017 and the host should be the hostname of your AWS instance.
+
 **Remember** to update the python notebook as discussed in https://github.com/vu-bigdata-2020/lectures/blob/master/00-assignmentInstructions/AcceptingaGithubassignment.pdf
 
 Remember to shutoff the EC2 instance when you are not using it.
