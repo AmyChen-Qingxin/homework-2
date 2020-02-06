@@ -98,8 +98,7 @@ Import the public key used for accessing package management system
 
 Create a list file for mongoDB
 	
-	$echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 
-	multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
+$echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-4.2.list
 
 	$sudo apt-get update
 
