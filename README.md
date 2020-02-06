@@ -121,7 +121,7 @@ Create the remote users, but first create admin -
 
 Enter the mongo shell on EC2
 
-	$sudo Mongo
+	$sudo mongo
 
 Select admin DB
 
@@ -129,10 +129,13 @@ Select admin DB
 
 **Change the admin password to something else**
 
-Create the “admin” user (you can call it whatever you want)
+Create the “admin” user (you can call it whatever you want). the exit command is used to close the shell
 
 	> db.createUser({ user: "admin", pwd: "adminpassword", roles: [{ role: "userAdminAnyDatabase", db: "admin" }] })
 	> db.auth("admin", "adminpassword")
+	> exit
+
+
 
 We are now going to enable authentication on the MongoDB instance, by modifying the mongod.conf file. If you’re on Linux:
 
@@ -161,7 +164,7 @@ Now login to mongo shell and select admin db and authenticate
 now create lahman database in mongo
 	>use  lahman;
 
-create remote user name - 'ubuntu' and a passowrd who can use lahman db 	
+create remote user name - 'ubuntu' and a passowrd who can use lahman db (this is generally a good idea. You restrict access for people)	 
 
 	>db.createUser({ user: "ubuntu", pwd: "yourpassword", roles: [{ role: "dbOwner", db: "lahman" }] })
 
