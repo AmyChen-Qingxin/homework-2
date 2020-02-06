@@ -86,7 +86,7 @@ Follow the instructions carefully to remain within **free tier**. That last part
 So after installing Ubuntu server and connecting to Git bash here, We get a prompt as below -
 
 
-** Note ** open the security group to allow incoming connections from anywhere on port 27017. You did this in previous assignment for MYSQL. It will work similarly here. See  this [PDF file for instructions](https://github.com/vu-bigdata-2020/lectures/blob/master/00-aws-setup-guide/Guide%20to%20use%20two%20EC2%20instances.pdf).
+**Note** open the security group to allow incoming connections from anywhere on port 27017. You did this in previous assignment for MYSQL. It will work similarly here. See  this [PDF file for instructions](https://github.com/vu-bigdata-2020/lectures/blob/master/00-aws-setup-guide/Guide%20to%20use%20two%20EC2%20instances.pdf).
 
 ## Step-2 Install the MongoDb packages
 
@@ -123,7 +123,7 @@ Enter the mongo shell on EC2
 Select admin DB
 	>use admin:
 
-**change the admin password to something else **
+**Change the admin password to something else**
 
 Create the “admin” user (you can call it whatever you want)
 
@@ -165,7 +165,7 @@ Check that everything went fine by trying to authenticate, with the db.auth(user
 
 	>db.auth("ubuntu", "yourpassword")
   
- ** Note ** - keep your username and password private. Very important. This is what you will use to connect to the database. 
+ **Note** - keep your username and password private. Very important. This is what you will use to connect to the database. 
 
 Refer to the link if you get stuck:
 https://medium.com/@matteocontrini/how-to-setup-auth-in-mongodb-3-0-properly-86b60aeef7e8
