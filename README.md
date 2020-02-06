@@ -5,7 +5,7 @@
 
 ## Table of contents
 - [Vanderbilt - Big Data 2020 - Homework 2](#vanderbilt---big-data-2020---homework-2)
-  * [Useful Information](#useful-information)
+    * [Useful Information](#useful-information)
     + [Example](#example)
     + [Mongodb Reference](#mongodb-reference)
     + [Mongodb Compass](#mongodb-compass)
@@ -14,15 +14,18 @@
     + [Updating the notebooks once your repository is created](#updating-the-notebooks-once-your-repository-is-created)
     + [Accepting Assignment](#accepting-assignment)
     + [Updating the python Notebook URL after accepting the assignment on classroom.github.com](#updating-the-python-notebook-url-after-accepting-the-assignment-on-classroomgithubcom)
-  * [Assignment](#assignment)
+- [Assignment](#assignment)
     + [Step-1 Create the EC2 Instance](#step-1-create-the-ec2-instance)
     + [Step-2 Install the MongoDb packages](#step-2-install-the-mongodb-packages)
     + [Step-3 Enable remote access to the mongoDB server running on EC2](#step-3-enable-remote-access-to-the-mongodb-server-running-on-ec2)
-    + [Step-4 Loading the MongoDB with Lahman database](#step-4-Loading-the-mongodb-with-lahman-database)
-    + [Step 5- Check initial Colab Connection](#step-5--check-initial-colab-connection)
-    + [Step 6 -  Queries [80 points]](#step-6----queries--80-points-)
-    + [Step 7 - Timing Plots [20 points]](#step-7---timing-plots--20-points-)
-    + [Step 8 - Bonus [25 points]](#step-8---bonus--25-points-)
+    + [Step-4 Loading the MongoDB with Lahman database](#step-4-loading-the-mongodb-with-lahman-database)
+    + [Step-5 Check initial Colab Connection](#step-5-check-initial-colab-connection)
+    + [Step-6 Queries - 80 points-](#step-6-queries---80-points-)
+    + [Step-7 Timing Plots - 20 points](#step-7-timing-plots---20-points)
+    + [Step-8 Bonus - 25 points](#step-8-bonus---25-points)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 The goal of this homework is to learn mongodb. You will use the baseball database and do the same queries as last assignment with mongo db
 
@@ -97,7 +100,7 @@ You will need to resolve conflicts if they occur.
 
 Once you have accepted the assignment, upate all notebooks (*.ipynb) including any example I provided as discussed in in https://github.com/vu-bigdata-2020/lectures/blob/master/00-assignmentInstructions/AcceptingaGithubassignment.pdf
 
-## Assignment 
+# Assignment 
 
 ### Step-1 Create the EC2 Instance
 
@@ -282,7 +285,7 @@ Below are the import commands for all csv files to import into the mongodb - **y
 
 
 
-### Step 5- Check initial Colab Connection
+### Step-5 Check initial Colab Connection
 
 Run the Colab connection script [test-colab-mongodb.ipynb](test-colab-mongodb.ipynb) and ensure that you get the connection and the number of tables correctly. Make sure that you update the database name, the username and the password. 
 
@@ -290,7 +293,7 @@ Run the Colab connection script [test-colab-mongodb.ipynb](test-colab-mongodb.ip
 
 Remember to shutoff the EC2 instance when you are not using it.
 
-### Step 6 -  Queries [80 points]
+### Step-6 Queries - 80 points- 
 
 Implement a function per query hw2.ipynb. Record the answers there and save it back to your repository.
 
@@ -315,7 +318,7 @@ The queries are
 14. The average salary of non-all stars in 2000.
 
 
-### Step 7 - Timing Plots [20 points]
+### Step-7 Timing Plots - 20 points
 
 Read about timeit function call at https://docs.python.org/2/library/timeit.html
 
@@ -324,7 +327,7 @@ Write a function that run all your queries 10 times and produces a box plot per 
 Also look at the weather box plot example in traffic example notebook in this repository
 
 
-### Step 8 - Bonus [25 points]
+### Step-8 Bonus - 25 points 
 
 check if you can modify your query functions and show that you can improve the time of execution by using the plots from step 7 and comparing different versions of the functions for step 6. It is required that all different versions of query functions return the correct answer. Note that you already know the correct answer from previous assignment.
 
