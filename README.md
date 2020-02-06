@@ -1,5 +1,9 @@
 
-# Table of contents
+
+
+# Vanderbilt - Big Data 2020 - Homework 2
+
+## Table of contents
 - [Vanderbilt - Big Data 2020 - Homework 2](#vanderbilt---big-data-2020---homework-2)
   * [Useful Information](#useful-information)
     + [Example](#example)
@@ -19,8 +23,6 @@
     + [Step 6 -  Queries [80 points]](#step-6----queries--80-points-)
     + [Step 7 - Timing Plots [20 points]](#step-7---timing-plots--20-points-)
     + [Step 8 - Bonus [25 points]](#step-8---bonus--25-points-)
-
-# Vanderbilt - Big Data 2020 - Homework 2
 
 The goal of this homework is to learn mongodb. You will use the baseball database and do the same queries as last assignment with mongo db
 
