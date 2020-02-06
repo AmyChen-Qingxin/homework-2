@@ -113,6 +113,8 @@ So after installing Ubuntu server and connecting to Git bash here, We get a prom
 
 **Note** open the security group to allow incoming connections from anywhere on port 27017. You did this in previous assignment for MYSQL. It will work similarly here. See  this [PDF file for instructions](https://github.com/vu-bigdata-2020/lectures/blob/master/00-aws-setup-guide/Guide%20to%20use%20two%20EC2%20instances.pdf).
 
+**Note** - you dont need to create a public elastic ip. You can use the hostname given by the connection string -- when you were connecting to the instance for accessing the instance. This will be the host string that you can give for connection -- the test connection notebook.
+
 ### Step-2 Install the MongoDb packages
 
 Login to your EC2 then type the commands:
