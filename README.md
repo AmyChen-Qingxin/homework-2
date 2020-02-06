@@ -118,9 +118,13 @@ Verify the mongod service
 Follow the instruction in the below link:
 
 Create the remote users, but first create admin -
+
 Enter the mongo shell on EC2
+
 	$sudo Mongo
+
 Select admin DB
+
 	>use admin:
 
 **Change the admin password to something else**
