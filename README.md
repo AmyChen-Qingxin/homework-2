@@ -15,6 +15,11 @@ Take a look at the example mondb notebook in [mongo-notebook-example](mongo-note
 Take a look at the following piazza post: https://piazza.com/class/k51vgkts30b12t?cid=72
 Also useful the following [slides ](https://github.com/vu-bigdata-2020/lectures/blob/master/05_nosql/NoSQLMongoDB.pdf) from lecture notes in class.
 
+
+## Mongodb Compass
+
+You can use the equivalent of SQl workbench to work with your mongodb database. It is available at https://www.mongodb.com/products/compass
+
 ## Important
 
 Read the instructions at https://github.com/vu-bigdata-2020/lectures/blob/master/00-assignmentInstructions/AcceptingaGithubassignment.pdf
