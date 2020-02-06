@@ -113,10 +113,11 @@ https://aws.amazon.com/getting-started/tutorials/launch-a-virtual-machine/?trk=g
 Caution: After doing your assignment make sure to shut down the EC2 instance and logout. This is necessary to avoid unnecessary charging to your AWS account.
 Follow the instructions carefully to remain within **free tier**. That last part is very important.
 
-So after installing Ubuntu server and connecting to Git bash here, We get a prompt as below -
+
+**Note** open the security group to allow incoming connections from anywhere on port 27017. You did this in previous assignment for MYSQL. It will work similarly here. See  this [PDF file for instructions](https://github.com/vu-bigdata-2020/lectures/blob/master/00-aws-setup-guide/Guide%20to%20use%20two%20EC2%20instances.pdf). Also see the figure below.
 
 
-**Note** open the security group to allow incoming connections from anywhere on port 27017. You did this in previous assignment for MYSQL. It will work similarly here. See  this [PDF file for instructions](https://github.com/vu-bigdata-2020/lectures/blob/master/00-aws-setup-guide/Guide%20to%20use%20two%20EC2%20instances.pdf).
+![showing the seucirty group configuration](incomingsecurityconfiguration.png)
 
 **Note** - you dont need to create a public elastic ip. You can use the hostname given by the connection string -- when you were connecting to the instance for accessing the instance. This will be the host string that you can give for connection -- the test connection notebook.
 
@@ -157,7 +158,7 @@ Enter the mongo shell on EC2
 
 Select admin DB
 
-	>use admin:
+	>use admin
 
 **Change the admin password to something else**
 
@@ -211,6 +212,7 @@ Now login to mongo shell and select admin db and authenticate
 	>db.auth("admin", "adminpassword")
 
 now create lahman database in mongo
+
 	>use  lahman;
 
 create remote user name - 'ubuntu' and a passowrd who can use lahman db (this is generally a good idea. You restrict access for people)	 
@@ -235,6 +237,8 @@ Use the lahman_sql_2012 comma delimited version (CSV) files.
 	$cd rawfiles
 	$wget http://www.seanlahman.com/files/database/lahman2012-csv.zip
 	$unzip lahman2012-csv.zip
+
+**Note** - you might be asked to install unzip - follow prompts
 
 if everything went well - it will look like following
 
@@ -281,7 +285,7 @@ Below are the import commands for all csv files to import into the mongodb - **y
 
 **you can use a cool shell command to import all**
 
-	$for file in `ls *.csv`; do mongoimport -d lahman -c `basename $file` --type csv $file --headerline --username "ubuntu" --password "yourpassword";done
+	$for file in `ls *.csv`; do mongoimport -d lahman -c `basename $file .csv` --type csv $file --headerline --username "ubuntu" --password "yourpassword";done
 
 
 
@@ -292,6 +296,17 @@ Run the Colab connection script [test-colab-mongodb.ipynb](test-colab-mongodb.ip
 **Remember** to update the python notebook as discussed in https://github.com/vu-bigdata-2020/lectures/blob/master/00-assignmentInstructions/AcceptingaGithubassignment.pdf
 
 Remember to shutoff the EC2 instance when you are not using it.
+
+At this point check initial connection from compass as well. During connection choose lahman as the authentication database. And provide the username and password you created for lahman database.
+
+ If you opened the ports correctly the connection will work and you can get something like following
+
+
+![](compass.png)
+
+![](compass2.png)
+
+![](compass3.png)
 
 ### Step-6 Queries - 80 points- 
 
