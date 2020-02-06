@@ -192,7 +192,7 @@ Do this for all the .csv files
 
 	$mongoimport -d <dbmane> -c <collection_name>t --type csv --file <input.csv> --headerline.
 
-Below are the import commands for all csv files to import into the mongodb -
+Below are the import commands for all csv files to import into the mongodb - **you need to update the username and password to what you set up -- see the instructions above**
 
 	$mongoimport -d lahman -c AllstarFull --type csv --file AllstarFull.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c AwardsSharePlayers --type csv --file AwardSharePlayers.csv --headerline --username "ubuntu" --password "yourpassword"
