@@ -123,7 +123,7 @@ Enter the mongo shell on EC2
 Select admin DB
 	>use admin:
 
-** change the admin password to something else **
+**change the admin password to something else **
 
 Create the “admin” user (you can call it whatever you want)
 
