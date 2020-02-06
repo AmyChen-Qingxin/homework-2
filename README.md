@@ -117,7 +117,7 @@ Follow the instructions carefully to remain within **free tier**. That last part
 **Note** open the security group to allow incoming connections from anywhere on port 27017. You did this in previous assignment for MYSQL. It will work similarly here. See  this [PDF file for instructions](https://github.com/vu-bigdata-2020/lectures/blob/master/00-aws-setup-guide/Guide%20to%20use%20two%20EC2%20instances.pdf). Also see the figure below.
 
 
-![showing the seucirty group configuration](incomingsecurityconfiguration.png)
+![showing the seucirty group configuration](images/incomingsecurityconfiguration.png)
 
 **Note** - you dont need to create a public elastic ip. You can use the hostname given by the connection string -- when you were connecting to the instance for accessing the instance. This will be the host string that you can give for connection -- the test connection notebook.
 
@@ -302,11 +302,11 @@ At this point check initial connection from compass as well. During connection c
  If you opened the ports correctly the connection will work and you can get something like following
 
 
-![](compass.png)
+![](images/compass.png)
 
-![](compass2.png)
+![](images/compass2.png)
 
-![](compass3.png)
+![](images/compass3.png)
 
 ### Step-6 Queries - 80 points- 
 
