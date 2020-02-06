@@ -15,6 +15,11 @@ Take a look at the example mondb notebook in [mongo-notebook-example](mongo-note
 Take a look at the following piazza post: https://piazza.com/class/k51vgkts30b12t?cid=72
 Also useful the following [slides ](https://github.com/vu-bigdata-2020/lectures/blob/master/05_nosql/NoSQLMongoDB.pdf) from lecture notes in class.
 
+## Important
+
+Read the instructions at https://github.com/vu-bigdata-2020/lectures/blob/master/00-assignmentInstructions/AcceptingaGithubassignment.pdf
+
+
 ## Assignment Repository
 
 Repositories will be created for each student. You should see yours at 
@@ -60,8 +65,7 @@ Once you have accepted the assignment, upate all notebooks (*.ipynb) including a
 ## AWS
 To access AWS go to https://aws.amazon.com/education/awseducate/ and use the account you created when you were invited to the class. Ensure that you can access this account and can land into an AWS console as shown below.
 
-
-# Part 1 
+# Assignment 
 
 ## Step-1 Create the EC2 Instance
 
@@ -76,6 +80,8 @@ Follow the instructions carefully to remain within **free tier**. That last part
 
 So after installing Ubuntu server and connecting to Git bash here, We get a prompt as below -
 
+
+** Note ** open the security group to allow incoming connections from anywhere on port 27017. You did this in previous assignment for MYSQL. It will work similarly here. See  this [PDF file for instructions](https://github.com/vu-bigdata-2020/lectures/blob/master/00-aws-setup-guide/Guide%20to%20use%20two%20EC2%20instances.pdf).
 
 ## Step-2 Install the MongoDb packages
 
@@ -107,17 +113,18 @@ Verify the mongod service
 
 Follow the instruction in the below link:
 
-Create the remote users,BUt first create admin -
+Create the remote users, but first create admin -
 Enter the mongo shell on EC2
 	$sudo Mongo
 Select admin DB
 	>use admin:
 
+** change the admin password to something else **
+
 Create the “admin” user (you can call it whatever you want)
 
 	> db.createUser({ user: "admin", pwd: "adminpassword", roles: [{ role: "userAdminAnyDatabase", db: "admin" }] })
 	> db.auth("admin", "adminpassword")
-
 
 We are now going to enable authentication on the MongoDB instance, by modifying the mongod.conf file. If you’re on Linux:
 
@@ -222,7 +229,7 @@ Run the Colab connection script [test-colab-mongodb.ipynb](test-colab-mongodb.ip
 
 Remember to shutoff the EC2 instance when you are not using it.
 
-## Step 6 -  Queries [100 points]
+## Step 6 -  Queries [80 points]
 
 Implement a function per query hw2.ipynb. Record the answers there and save it back to your repository.
 
@@ -245,3 +252,19 @@ The queries are
 12. The number of errors Barry Bonds had in 2000. 
 13. The average salary of all stars in 2000.
 14. The average salary of non-all stars in 2000.
+
+
+# Step 7 - Timing Plots [20 points]
+
+Read about timeit function call at https://docs.python.org/2/library/timeit.html
+
+Write a function that run all your queries 10 times and produces a box plot per query. Read about https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.boxplot.html
+
+Also look at the weather box plot example in traffic example notebook in this repository
+
+
+# Step 8 - Bonus [25 points]
+
+check if you can modify your query functions and show that you can improve the time of execution by using the plots from step 7 and comparing different versions of the functions for step 6. It is required that all different versions of query functions return the correct answer. Note that you already know the correct answer from previous assignment.
+
+
