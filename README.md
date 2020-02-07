@@ -174,6 +174,8 @@ We are now going to enable authentication on the MongoDB instance, by modifying 
 
 	$sudo vim  /etc/mongod.conf
 
+**Note:** to enter edit/insert mode in vim, press 'i'. To save/exit, type ':x':
+
 Add these lines at the bottom of the YAML config file:
 
 ```
@@ -253,22 +255,24 @@ if everything went well - it will look like following
 Then import the csv files into mongoDB using the below command.
 Do this for all the .csv files
 
-	$mongoimport -d <dbmane> -c <collection_name>t --type csv --file <input.csv> --headerline.
+	$mongoimport -d <dbname> -c <collection_name>t --type csv --file <input.csv> --headerline.
 
 Below are the import commands for all csv files to import into the mongodb - **you need to update the username and password to what you set up -- see the instructions above**
+
+**Using an online "find-and-replace" tool to change the "username" and "yourpassword" fields for all below queries will make this process faster.**
 
 	$mongoimport -d lahman -c AllstarFull --type csv --file AllstarFull.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c AwardsSharePlayers --type csv --file AwardsSharePlayers.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c Appearances --type csv --file Appearances.csv --headerline --username "ubuntu" --password "yourpassword"
- 	$mongoimport -d lahman -c AwardManagers --type csv --file AwardManagers.csv --headerline --username "ubuntu" --password "yourpassword"
- 	$mongoimport -d lahman -c AwardShareManagers --type csv --file AwardShareManagers.csv --headerline --username "ubuntu" --password "yourpassword"
- 	$mongoimport -d lahman -c AwardPlayers --type csv --file AwardPlayers.csv --headerline --username "ubuntu" --password "yourpassword"
+ 	$mongoimport -d lahman -c AwardsManagers --type csv --file AwardsManagers.csv --headerline --username "ubuntu" --password "yourpassword"
+ 	$mongoimport -d lahman -c AwardsShareManagers --type csv --file AwardsShareManagers.csv --headerline --username "ubuntu" --password "yourpassword"
+ 	$mongoimport -d lahman -c AwardsPlayers --type csv --file AwardsPlayers.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c Batting --type csv --file Batting.csv --headerline --username "ubuntu" --password "yourpassword"
  	$ls 
  	$mongoimport -d lahman -c Fielding --type csv --file Fielding.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c FieldingOF --type csv --file FieldingOF.csv --headerline --username "ubuntu" --password "yourpassword"
   	$mongoimport -d lahman -c FieldingPost --type csv --file FieldingPost.csv --headerline --username "ubuntu" --password "yourpassword"
- 	4mongoimport -d lahman -c HallOfFame --type csv --file HallOfFame.csv --headerline --username "ubuntu" --password "yourpassword"
+ 	$mongoimport -d lahman -c HallOfFame --type csv --file HallOfFame.csv --headerline --username "ubuntu" --password "yourpassword"
   	$mongoimport -d lahman -c Managers --type csv --file Managers.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c ManagersHalf --type csv --file ManagersHalf.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c Master --type csv --file Master.csv --headerline --username "ubuntu" --password "yourpassword"
@@ -276,10 +280,10 @@ Below are the import commands for all csv files to import into the mongodb - **y
   	$mongoimport -d lahman -c PitchingPost --type csv --file PitchingPost.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c Salaries --type csv --file Salaries.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c Schools --type csv --file Schools.csv --headerline --username "ubuntu" --password "yourpassword"
- 	$mongoimport -d lahman -c SchoolsPlayers --type csv --file SchoolsPLayers.csv --headerline --username "ubuntu" --password "yourpassword"
+ 	$mongoimport -d lahman -c SchoolsPlayers --type csv --file SchoolsPlayers.csv --headerline --username "ubuntu" --password "yourpassword"
   	$mongoimport -d lahman -c SeriesPost --type csv --file SeriesPost.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c Teams --type csv --file Teams.csv --headerline --username "ubuntu" --password "yourpassword"
- 	$mongoimport -d lahman -c TeamsFranchises --type csv --file TeamFranchises.csv --headerline --username "ubuntu" --password "yourpassword"
+ 	$mongoimport -d lahman -c TeamsFranchises --type csv --file TeamsFranchises.csv --headerline --username "ubuntu" --password "yourpassword"
  	$mongoimport -d lahman -c TeamsHalf --type csv --file TeamsHalf.csv --headerline --username "ubuntu" --password "yourpassword"
 
 
