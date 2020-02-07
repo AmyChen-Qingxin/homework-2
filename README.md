@@ -316,7 +316,7 @@ At this point check initial connection from compass as well. During connection c
 
 ### Step-6 Queries - 80 points- 
 
-Implement a function per query hw2.ipynb. Record the answers there and save it back to your repository.
+Implement a function per query in a file called hw2.ipynb. Record the answers there and save it back to your repository. You have to create this file. Use the code in testcolab file.
 
 **Remember** to update the python notebook as discussed in https://github.com/vu-bigdata-2020/lectures/blob/master/00-assignmentInstructions/AcceptingaGithubassignment.pdf
 
